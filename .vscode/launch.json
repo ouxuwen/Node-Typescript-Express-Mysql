@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // 调试前运行的任务 (task)，就是上面编译任务中的 label
+      "preLaunchTask": "build-typescript",
+      // 调试任务名称
+      "name": "server debug",
+      "env": {
+        // 传递的参数
+        "NODE_ENV": "development"
+      },
+      // 调试的 node 入口文件，注意 tsconfig.json 里面要打开 sourceMap
+      "program": "${workspaceRoot}/dist/app.js"
+    }
+  ]
+}
