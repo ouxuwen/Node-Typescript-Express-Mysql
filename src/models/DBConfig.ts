@@ -2,6 +2,6 @@ export const db = {
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'demoshop',
+    database: 'demo',
     port: 3306
 }

@@ -34,7 +34,7 @@ export class BaseModel extends Model {
                 this.connection.query(sql, (errs, result) => {
                     if (errs) {
                         reject(errs)
-                        logger.info(`Using select error : ${errs.message}`);
+                        logger.error(`Using select error : ${errs.message}`);
                     }
                     logger.info(`Using select result : ${JSON.stringify(result)}`);
                     resolve(result);

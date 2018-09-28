@@ -7,8 +7,8 @@ import { Response, Request, NextFunction } from "express";
 const index  = express(); 
 
 index.get('/',async (req: Request, res: Response) => {
-    let user = new GoodsModel();
-    let ret = await user.getInfo()
+    let goods = new GoodsModel();
+    let ret = await goods.getInfo()
     res.send(ret);
 });
 
