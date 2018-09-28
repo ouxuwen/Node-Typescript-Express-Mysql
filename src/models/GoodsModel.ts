@@ -5,5 +5,7 @@ export class GoodsModel extends BaseModel {
     constructor() {
         super();
     }
+
+    
 }
 

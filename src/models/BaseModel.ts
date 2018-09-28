@@ -1,7 +1,6 @@
 
-import { Model } from './Model'
-import logger from "../util/logger";
-import { db } from './Config';
+import { Model } from './Model';
+import { logger } from "../util/logger";
 import { resolve } from 'url';
 import { reject } from 'async';
 export class BaseModel extends Model {
@@ -137,7 +136,7 @@ export class BaseModel extends Model {
         if (condition && Object.keys(condition).length > 0) {
             where += 'where ';
             for (let key in condition) {
-                if (typeof(condition[key]) == 'string' && condition[key].split(',').length > 1) {
+                if (typeof (condition[key]) == 'string' && condition[key].split(',').length > 1) {
                     let cArr: string[] = condition[key].split(',');
                     where += '( ';
                     cArr.forEach(ele => {
