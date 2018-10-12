@@ -1,6 +1,6 @@
 import mysql from 'mysql';
 import { Pool } from 'mysql';
-import { db } from './DBConfig';
+import { db } from '../config/DBConfig';
 
 export class Model {
     protected connection: Pool;
