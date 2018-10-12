@@ -9,6 +9,7 @@ export class BaseModel extends Model {
 
     constructor() {
         super();
+       
     }
 
     /**
@@ -36,7 +37,7 @@ export class BaseModel extends Model {
                         reject(errs)
                         logger.error(`Using select error : ${errs.message}`);
                     }
-                    logger.info(`Using select result : ${JSON.stringify(result)}`);
+                   logger.info(`Using select result : ${result.length}`);
                     resolve(result);
                 })
             })

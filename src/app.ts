@@ -2,17 +2,15 @@ import express from "express";
 import { Response, Request, NextFunction } from "express";
 import index from './controller/Index';
 
-import { myLogger } from "./util/logger";
+import { myLogger, checkLogDir } from "./util/logger";
 const app = express();
+
+//创建日志文件夹
+checkLogDir();
 app.use(myLogger);
 
-
-
-app.set("port", process.env.PORT || 3000);
-
-app.get("/",  (req: Request, res: Response) => {
-    res.send('Hello world');
-});
+// process.env.PORT  ||
+app.set("port", 3000 );
 
 app.use("/index", index);
 
